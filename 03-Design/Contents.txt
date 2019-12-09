@@ -1,0 +1,3 @@
+Sequence Diagrams
+Class Diagrams
+ER Diagrams
