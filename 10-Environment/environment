@@ -1,0 +1,8 @@
+Konventioner:
+
+Alle Use Cases bliver skrevet som UC(X) NAVN (X værende det nummer de optræder i).
+
+Alle System Sekvens Diagrammer bliver skrevet som SSD(X) (Hvor x passer med det Use Case Diagramet tilhører så SSD1 hører til UC 1)
+
+Alle Sekvens Diagrammer bliver skrevet som SD(X) (Hvor x passer med Use Case Diagramet og System Sekvens Diagramet i.e. SD1 tilhører SSD1 og UC1)
+
