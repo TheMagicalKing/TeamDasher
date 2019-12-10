@@ -6,3 +6,4 @@ Alle System Sekvens Diagrammer bliver skrevet som SSD(X) (Hvor x passer med det 
 
 Alle Sekvens Diagrammer bliver skrevet som SD(X) (Hvor x passer med Use Case Diagramet og System Sekvens Diagramet i.e. SD1 tilhører SSD1 og UC1)
 
+Alle Operations Kontrakter bliver skrevet som SSDX-OCY NAVN (X Værende nummeret nummeret på System Sekvens Diagramet og Y værende nummeret på Operation Kontrakten, og NAVN værende et passende navn f.eks. SSD1-OC1-addPokemon)
