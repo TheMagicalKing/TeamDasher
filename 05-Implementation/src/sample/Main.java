@@ -8,11 +8,17 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    //Starting the application
+    @Override
+    public void init() throws Exception {
+        System.out.println("Application initializing!");
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        Parent root = FXMLLoader.load(getClass().getResource("resources/LoginMenu.fxml"));
+        primaryStage.setTitle("DasherDex");
+        primaryStage.setScene(new Scene(root, 620, 500));
         primaryStage.show();
     }
 
