@@ -19,6 +19,11 @@
                   <Image url="@../../pictures/editMenugit.png" />
                </image>
             </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="298.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../pictures/dasherEditGit.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
       <GridPane layoutY="329.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="71.0" prefWidth="594.0">

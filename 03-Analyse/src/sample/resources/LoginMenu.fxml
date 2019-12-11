@@ -22,6 +22,11 @@
                   <Image url="@../../pictures/dasherDexgit.png" />
                </image>
             </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../pictures/dasherLoginGit.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
       <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="190.0" prefWidth="600.0">

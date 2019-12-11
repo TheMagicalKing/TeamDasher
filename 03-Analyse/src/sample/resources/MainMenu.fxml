@@ -14,13 +14,19 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.appControllers.MainMenuController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="705.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.appControllers.MainMenuController">
    <children>
       <Pane prefHeight="235.0" prefWidth="600.0">
          <children>
             <ImageView fitHeight="214.0" fitWidth="430.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../pictures/menudexgit.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="664.0" layoutY="203.0" text="*Error Message*" textFill="RED" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="442.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../pictures/dasherMenuGit.png" />
                </image>
             </ImageView>
          </children></Pane>
@@ -43,15 +49,26 @@
                   <MenuItem fx:id="menuItem3" mnemonicParsing="false" onAction="#item3On" text="Weakness" />
               </items>
             </MenuButton>
-            <Label text="Error Message" />
-            <Button fx:id="addEditButton" mnemonicParsing="false" onAction="#addEditAction" text="Add" />
-            <Button mnemonicParsing="false" text="Edit" />
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#addAction" text="Add">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin></Button>
+            <Button fx:id="editButton" mnemonicParsing="false" onAction="#editAction" text="Edit">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin></Button>
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteAction" text="Delete">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin></Button>
          </children>
       </HBox>
-      <TableView prefHeight="288.0" prefWidth="600.0">
+      <TableView prefHeight="442.0" prefWidth="764.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn prefWidth="190.0" text="Name" />
+          <TableColumn prefWidth="190.0" text="Element" />
+            <TableColumn prefWidth="190.0" text="Evolution" />
+            <TableColumn prefWidth="190.0" text="Weakness" />
         </columns>
       </TableView>
    </children>
