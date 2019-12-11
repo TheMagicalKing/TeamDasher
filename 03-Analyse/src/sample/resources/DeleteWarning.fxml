@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.appControllers.DeleteController">
    <children>
       <VBox prefHeight="400.0" prefWidth="600.0">
@@ -30,12 +29,12 @@
             </HBox>
             <HBox prefHeight="206.0" prefWidth="600.0">
                <children>
-                  <Button mnemonicParsing="false" text="YES" textFill="#970a0a">
+                  <Button fx:id="confirmDeleteButton" mnemonicParsing="false" onAction="#confirmDeleteButtonAction" text="YES" textFill="#970a0a">
                      <HBox.margin>
                         <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="No, i'm sorry pokey" textFill="#108303">
+                  <Button fx:id="regretDeleteButton" mnemonicParsing="false" onAction="#regretDeleteButtonAction" text="No, i'm sorry pokey" textFill="#108303">
                      <HBox.margin>
                         <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />
                      </HBox.margin>

@@ -10,13 +10,13 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<Pane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.appControllers.AddMenuController">
    <children>
       <Pane prefHeight="308.0" prefWidth="594.0">
          <children>
             <ImageView fitHeight="322.0" fitWidth="583.0" layoutX="6.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../pictures/addMenugit.png" />
+                  <Image url="@../../pictures/addMenuGit.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="123.0" fitWidth="212.0" layoutX="314.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
@@ -47,8 +47,8 @@
             <Label text="Weakness" GridPane.columnIndex="3" />
             <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="Add" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <Label text="Error Message" GridPane.columnIndex="4" />
+            <Button fx:id="addedButton" mnemonicParsing="false" onAction="#addedButtonAction" text="Add" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Label text="*Error Message*" textFill="#eb0f0f" visible="false" GridPane.columnIndex="4" />
          </children>
       </GridPane>
    </children>

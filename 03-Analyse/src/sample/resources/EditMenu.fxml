@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<Pane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.appControllers.EditMenuController">
    <children>
       <Pane prefHeight="308.0" prefWidth="594.0">
          <children>
@@ -47,8 +47,8 @@
             <Label text="Weakness" GridPane.columnIndex="3" />
             <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="Add" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <Label text="Error message" GridPane.columnIndex="4" />
+            <Button fx:id="editedButton" mnemonicParsing="false" onAction="#editedButtonAction" text="Add" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Label text="*Error message*" textFill="#bf0707" visible="false" GridPane.columnIndex="4" />
          </children>
       </GridPane>
    </children>
