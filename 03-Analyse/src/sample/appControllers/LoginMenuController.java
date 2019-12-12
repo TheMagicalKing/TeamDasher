@@ -16,16 +16,28 @@ public class LoginMenuController {
     public Label waitForLogin = null;
 
     public void onAction(ActionEvent actionEvent) throws IOException {
-        System.out.println("Button was clicked");
         waitForLogin.setText("Logging in!");
 
         //Changing to menu scene
         Parent menuParent = FXMLLoader.load(getClass().getResource("../resources/MainMenu.fxml"));
-        Scene menuScene = new Scene(menuParent); //Creating new scene for the menu
+        Scene menuScene = new Scene(menuParent);
 
         Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
 
         window.setScene(menuScene);
         window.show();
+    }
+    public Button createAccountButton = null;
+
+    public void createAccountButtonAction(ActionEvent createAccountEvent) throws IOException {
+
+        //Changing to create login menu scene
+        Parent menuParent = FXMLLoader.load(getClass().getResource("../resources/CreateLoginMenu.fxml"));
+        Scene createLoginScene = new Scene(menuParent);
+
+        Stage createLoginWindow = (Stage) ((Node) createAccountEvent.getSource()).getScene().getWindow();
+
+        createLoginWindow.setScene(createLoginScene);
+        createLoginWindow.show();
     }
 }
