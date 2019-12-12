@@ -15,7 +15,7 @@ REMEMBER TO ADD THIS FILE TO .gitignore!!!!!
 public class DBCon {
 
 private static String username = "root";
-private static String password = "";
+private static String password = "HEJMOR";
 private static String url = "jdbc:mysql://localhost/pokemon?ServerTimezone=UTC";
 private static Connection conDB;
 
