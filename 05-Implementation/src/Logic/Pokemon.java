@@ -6,9 +6,11 @@ public class Pokemon extends DasherDexCon {
 
     Pokemon (String name, String type){}
 
+    public void addPokemon(String name, String type){}
+
     public void deletePokemon(int id){}
 
-    public void findPokemon(String name, String type){}
+    public void find(String name, String type){}
 
     public void choosePokemon(String name, String type){}
 
