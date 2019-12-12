@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.sql.ResultSet;
 
 public class MainMenuController {
 
@@ -95,5 +96,9 @@ public class MainMenuController {
     TableColumn typeColumn = new TableColumn();
     TableColumn evolutionColumn = new TableColumn();
     TableColumn weaknessColumn = new TableColumn();
+    Button updateTableButton = new Button();
 
+    public void updateTableButtonAction(ActionEvent updateTableEvent) throws IOException {
+        
+    }
 }
