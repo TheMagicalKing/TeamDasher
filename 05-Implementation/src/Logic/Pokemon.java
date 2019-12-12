@@ -1,6 +1,6 @@
 package Logic;
 
-public class Pokemon {
+public class Pokemon extends DasherDexCon {
     private String name;
     private String type;
 
