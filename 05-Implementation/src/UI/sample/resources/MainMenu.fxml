@@ -63,12 +63,12 @@
                </HBox.margin></Button>
          </children>
       </HBox>
-      <TableView prefHeight="442.0" prefWidth="764.0">
+      <TableView fx:id="dasherDexTable" prefHeight="442.0" prefWidth="764.0">
         <columns>
-          <TableColumn prefWidth="190.0" text="Name" />
-          <TableColumn prefWidth="190.0" text="Element" />
-            <TableColumn prefWidth="190.0" text="Evolution" />
-            <TableColumn prefWidth="190.0" text="Weakness" />
+          <TableColumn fx:id="nameColumn" prefWidth="190.0" text="Name" />
+          <TableColumn fx:id="typeColumn" prefWidth="190.0" text="Type" />
+            <TableColumn fx:id="evolutionColumn" prefWidth="190.0" text="Evolution" />
+            <TableColumn fx:id="weaknessColumn" prefWidth="190.0" text="Weakness" />
         </columns>
       </TableView>
    </children>

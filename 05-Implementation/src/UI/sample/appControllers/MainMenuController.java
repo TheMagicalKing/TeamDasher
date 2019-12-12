@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -87,4 +89,11 @@ public class MainMenuController {
             e.printStackTrace();
         }
     }
+
+    TableView dasherDexTable = new TableView();
+    TableColumn nameColumn = new TableColumn();
+    TableColumn typeColumn = new TableColumn();
+    TableColumn evolutionColumn = new TableColumn();
+    TableColumn weaknessColumn = new TableColumn();
+
 }
