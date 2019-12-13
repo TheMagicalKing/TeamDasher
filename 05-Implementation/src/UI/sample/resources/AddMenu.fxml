@@ -39,14 +39,14 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextField GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="addNameField" GridPane.rowIndex="1" />
+            <TextField fx:id="addTypeField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label contentDisplay="CENTER" text="Name" />
-            <Label text="Element" GridPane.columnIndex="1" />
+            <Label text="Type" GridPane.columnIndex="1" />
             <Label text="Evolution" GridPane.columnIndex="2" />
             <Label text="Weakness" GridPane.columnIndex="3" />
-            <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="addEvolutionField" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="addWeaknessField" GridPane.columnIndex="3" GridPane.rowIndex="1" />
             <Button fx:id="addedButton" mnemonicParsing="false" onAction="#addedButtonAction" text="Add" GridPane.columnIndex="4" GridPane.rowIndex="1" />
             <Label text="*Error Message*" textFill="#eb0f0f" visible="false" GridPane.columnIndex="4" />
          </children>

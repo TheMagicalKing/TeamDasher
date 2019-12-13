@@ -6,11 +6,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.sql.ResultSet;
 
 public class MainMenuController {
 
@@ -86,5 +89,16 @@ public class MainMenuController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    TableView dasherDexTable = new TableView();
+    TableColumn nameColumn = new TableColumn();
+    TableColumn typeColumn = new TableColumn();
+    TableColumn evolutionColumn = new TableColumn();
+    TableColumn weaknessColumn = new TableColumn();
+    Button updateTableButton = new Button();
+
+    public void updateTableButtonAction(ActionEvent updateTableEvent) throws IOException {
+
     }
 }
