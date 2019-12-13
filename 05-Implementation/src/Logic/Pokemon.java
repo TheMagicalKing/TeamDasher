@@ -14,6 +14,8 @@ public class Pokemon {
 
     public Pokemon (String name, String type){}
 
+    public static void initializeDasherDex() {}
+
     public void addPokemon(String name, String type){}
 
     public void deletePokemon(int id){}
@@ -30,5 +32,8 @@ public class Pokemon {
 
     public String getType() {return type;}
 
-    public void setType(String type) {this.type = type;}
+    public void setType(String type) {
+        
+        this.type = type;
+    }
 }
