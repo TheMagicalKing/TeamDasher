@@ -1,105 +1,34 @@
 package Logic;
 
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-
-import static Persistance.DBCon.getConnectionDB;
+import javax.xml.namespace.QName;
 
 public class Pokemon {
 
-    public static void initializeDasherDex() {
-        PreparedStatement preparedStatement = null;
+    private String name;
+    private String type;
 
-        try {
-            preparedStatement = getConnectionDB().prepareStatement("CREATE SCHEMA IF NOT EXISTS dasherdex");
-            preparedStatement.executeUpdate();
-            System.out.println("Create Schema");
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            if (preparedStatement != null) {
-                try {
-                    preparedStatement.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-
-            if (getConnectionDB() != null) {
-                try {
-                    getConnectionDB().close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
+    public Pokemon (){
+    this.name = "";
+    this.type = "";
     }
 
-    public void addPokemon(String name, String type) {
+    public Pokemon (String name, String type){}
 
-        PreparedStatement preparedStatement = null;
+    public void addPokemon(String name, String type){}
 
-        try {
-            preparedStatement = getConnectionDB().prepareStatement("CREATE TABLE IF NOT EXISTS dasherdex.pokemon (id int primary key unique auto_increment," + "name varchar(55), type varchar(55))");
-            preparedStatement.executeUpdate();
-            System.out.println("Create Table");
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            if (preparedStatement != null) {
-                try {
-                    preparedStatement.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
+    public void deletePokemon(int id){}
 
-            if (getConnectionDB() != null) {
-                try {
-                    getConnectionDB().close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        try {
-            preparedStatement = getConnectionDB().prepareStatement("INSERT INTO dasherdex.pokemon (name, type) VALUES ('"+name+"', '"+type+"');");
-            preparedStatement.executeUpdate();
-            System.out.println("INSERT INTO pokemon");
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            if (preparedStatement != null) {
-                try {
-                    preparedStatement.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
+    public void findPokemon(String name, String type){}
 
-            if (getConnectionDB() != null) {
-                try {
-                    getConnectionDB().close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
+    public void choosePokemon(String name, String type){}
 
-    public void deletePokemon(int id) {
+    public void specifyPokemon(String name, String type){}
 
-    }
+    public String getName() {return name;}
 
-    public void find(String name, String type) {
+    public void setName(String name) {this.name = name;}
 
-    }
+    public String getType() {return type;}
 
-    public void choosePokemon(String name, String type) {
-
-    }
-
-    public void specifyPokemon(String name, String type) {
-
-    }
+    public void setType(String type) {this.type = type;}
 }
