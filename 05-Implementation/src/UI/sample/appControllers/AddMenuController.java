@@ -1,5 +1,6 @@
 package UI.sample.appControllers;
 
+import Logic.DasherDexCon;
 import Logic.Pokemon;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
@@ -7,6 +8,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class AddMenuController {
     public Button addedButton = new Button();
@@ -16,9 +18,11 @@ public class AddMenuController {
     public TextField addWeaknessField = new TextField();
 
     Pokemon pi = new Pokemon();
+    DasherDexCon addPokemon = new DasherDexCon();
 
-    public void addedButtonAction(ActionEvent addButtonEvent) throws IOException {
-        pi.addPokemon(addNameField.getText(), addTypeField.getText());
+    public void addedButtonAction(ActionEvent addButtonEvent) throws IOException, SQLException {
+        addPokemon.DasherDexCon(addNameField.getText(),addTypeField.getText());
+        //pi.addPokemon(addNameField.getText(), addTypeField.getText());
         Stage stage = (Stage) addedButton.getScene().getWindow();
         stage.close();
     }
