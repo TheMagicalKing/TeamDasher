@@ -7,12 +7,40 @@ import static Persistance.DBCon.getConnectionDB;
 
 public class Pokemon {
 
+    public static void initializeDasherDex() {
+        PreparedStatement preparedStatement = null;
+
+        try {
+            preparedStatement = getConnectionDB().prepareStatement("CREATE SCHEMA IF NOT EXISTS dasherdex");
+            preparedStatement.executeUpdate();
+            System.out.println("Create Schema");
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (preparedStatement != null) {
+                try {
+                    preparedStatement.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if (getConnectionDB() != null) {
+                try {
+                    getConnectionDB().close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
     public void addPokemon(String name, String type) {
 
         PreparedStatement preparedStatement = null;
 
         try {
-            preparedStatement = getConnectionDB().prepareStatement("CREATE TABLE IF NOT EXISTS pokemon (id int primary key unique auto_increment," + "name varchar(55), type varchar(55))");
+            preparedStatement = getConnectionDB().prepareStatement("CREATE TABLE IF NOT EXISTS dasherdex.pokemon (id int primary key unique auto_increment," + "name varchar(55), type varchar(55))");
             preparedStatement.executeUpdate();
             System.out.println("Create Table");
         } catch (Exception e) {
@@ -35,7 +63,7 @@ public class Pokemon {
             }
         }
         try {
-            preparedStatement = getConnectionDB().prepareStatement("INSERT INTO pokemon (name, type) VALUES ('"+name+"', '"+type+"');");
+            preparedStatement = getConnectionDB().prepareStatement("INSERT INTO dasherdex.pokemon (name, type) VALUES ('"+name+"', '"+type+"');");
             preparedStatement.executeUpdate();
             System.out.println("INSERT INTO pokemon");
         } catch (Exception e) {

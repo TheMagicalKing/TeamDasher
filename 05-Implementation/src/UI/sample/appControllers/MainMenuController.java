@@ -99,6 +99,6 @@ public class MainMenuController {
     Button updateTableButton = new Button();
 
     public void updateTableButtonAction(ActionEvent updateTableEvent) throws IOException {
-        
+
     }
 }

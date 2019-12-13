@@ -15,9 +15,9 @@ REMEMBER TO ADD THIS FILE TO .gitignore!!!!!
 
 public class DBCon {
 
-    private static String username = "";
+    private static String username = "root";
     private static String password = "";
-    private static String url = "jdbc:mysql://localhost/dasherdex";
+    private static String url = "jdbc:mysql://localhost/";
     private static Connection conDB;
 
 
