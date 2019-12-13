@@ -12,7 +12,8 @@ public class Main extends Application {
     @Override
     public void init() throws Exception {
         System.out.println("Application initializing!");
-        Logic.Pokemon.initializeDasherDex();
+        //TODO lav en klasse med metoden forneden
+        //Logic.Pokemon.initializeDasherDex();
     }
 
     @Override
