@@ -46,8 +46,6 @@
             <MenuButton fx:id="searchDropDown" mnemonicParsing="false" text="MenuButton">
               <items>
                 <MenuItem fx:id="menuItem1" mnemonicParsing="false" onAction="#item1On" text="Type" />
-                <MenuItem fx:id="menuItem2" mnemonicParsing="false" onAction="#item2On" text="Evolution" />
-                  <MenuItem fx:id="menuItem3" mnemonicParsing="false" onAction="#item3On" text="Weakness" />
               </items>
             </MenuButton>
             <Button fx:id="addButton" mnemonicParsing="false" onAction="#addAction" text="Add">
@@ -68,8 +66,6 @@
         <columns>
           <TableColumn fx:id="nameColumn" prefWidth="190.0" text="Name" />
           <TableColumn fx:id="typeColumn" prefWidth="190.0" text="Type" />
-            <TableColumn fx:id="evolutionColumn" prefWidth="190.0" text="Evolution" />
-            <TableColumn fx:id="weaknessColumn" prefWidth="190.0" text="Weakness" />
         </columns>
       </TableView>
    </children>
