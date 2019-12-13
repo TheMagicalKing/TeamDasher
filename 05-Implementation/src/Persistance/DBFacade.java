@@ -4,9 +4,7 @@ import java.sql.SQLException;
 
 public class DBFacade {
 
-    public static void main(String[] args) throws SQLException {
-        PokemonMapper.specifyPokemon("Charizard","Fire",PokemonMapper.addPokemon());
+    public void DBFacade(String name, String type) throws SQLException {
+        PokemonMapper.specifyPokemon(name, type, PokemonMapper.addPokemon());
     }
-
-
 }
