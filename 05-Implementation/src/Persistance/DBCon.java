@@ -17,7 +17,7 @@ public class DBCon {
 
     private static String username = "root";
     private static String password = "";
-    private static String url = "jdbc:mysql://localhost/";
+    private static String url = "jdbc:mysql://localhost/dasherdex";
     private static Connection conDB;
 
 
