@@ -4,7 +4,7 @@ import Persistance.DBFacade;
 import java.sql.SQLException;
 
 public class DasherDexCon  {
-    public void DasherDexCon(String name, String type) throws SQLException {
+    public void DasherDexCon(String name, int type) throws SQLException {
         DBFacade addPokemon = new DBFacade();
         addPokemon.DBFacade(name,type);
     }

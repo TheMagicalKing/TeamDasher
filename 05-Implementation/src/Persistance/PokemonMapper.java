@@ -29,12 +29,12 @@ public class PokemonMapper {
 
     }
 
-    public static void specifyPokemon(String name, String type, int pid) throws SQLException {
+    public static void specifyPokemon(String name, int type, int pid) throws SQLException {
 
         String queryString="update pokemontable set name=?, type=? where pid = "+ pid +";";
         prestmt = conDB.prepareStatement(queryString);
         prestmt.setString(1, name);
-        prestmt.setString(2, type);
+        prestmt.setInt(2, type);
         prestmt.execute();
 
     }
