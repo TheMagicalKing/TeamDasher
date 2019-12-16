@@ -97,8 +97,7 @@ public class MainMenuController {
     TableColumn nameColumn = new TableColumn();
     @FXML
     TableColumn typeColumn = new TableColumn();
-    TableColumn evolutionColumn = new TableColumn();
-    TableColumn weaknessColumn = new TableColumn();
+
     @FXML
     Button updateTableButton = new Button();
 

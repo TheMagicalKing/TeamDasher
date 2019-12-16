@@ -14,11 +14,12 @@ public class AddMenuController {
     public Button addedButton = new Button();
     public TextField addNameField = new TextField();
     public TextField addTypeField = new TextField();
-    public TextField addEvolutionField = new TextField();
-    public TextField addWeaknessField = new TextField();
+
 
     Pokemon pi = new Pokemon();
     DasherDexCon addPokemon = new DasherDexCon();
+
+
 
     public void addedButtonAction(ActionEvent addButtonEvent) throws IOException, SQLException {
         addPokemon.DasherDexCon(addNameField.getText(),addTypeField.getText());
