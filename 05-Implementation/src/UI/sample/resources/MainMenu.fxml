@@ -33,7 +33,7 @@
       <HBox prefHeight="28.0" prefWidth="600.0">
          <children>
             <Button fx:id="updateTableButton" mnemonicParsing="false" onAction="#updateTableButtonAction" text="Update" />
-            <TextField prefHeight="25.0" prefWidth="297.0">
+            <TextField prefHeight="25.0" prefWidth="279.0">
                <opaqueInsets>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </opaqueInsets>
@@ -43,9 +43,10 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </opaqueInsets>
             </Button>
-            <MenuButton fx:id="searchDropDown" mnemonicParsing="false" text="MenuButton">
+            <MenuButton fx:id="searchDropDown" mnemonicParsing="false" text="Seach Parameter">
               <items>
-                <MenuItem fx:id="menuItem1" mnemonicParsing="false" onAction="#item1On" text="Type" />
+                  <MenuItem fx:id="menuItem1" mnemonicParsing="false" onAction="#item1On" text="Name" />
+                <MenuItem fx:id="menuItem2" mnemonicParsing="false" onAction="#item2On" text="Type" />
               </items>
             </MenuButton>
             <Button fx:id="addButton" mnemonicParsing="false" onAction="#addAction" text="Add">

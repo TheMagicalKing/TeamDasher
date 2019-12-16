@@ -11,19 +11,17 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class AddMenuController {
+
+    //Add Pokemon action
     public Button addedButton = new Button();
     public TextField addNameField = new TextField();
     public TextField addTypeField = new TextField();
 
-
     Pokemon pi = new Pokemon();
     DasherDexCon addPokemon = new DasherDexCon();
 
-
-
     public void addedButtonAction(ActionEvent addButtonEvent) throws IOException, SQLException {
         addPokemon.DasherDexCon(addNameField.getText(),addTypeField.getText());
-        //pi.addPokemon(addNameField.getText(), addTypeField.getText());
         Stage stage = (Stage) addedButton.getScene().getWindow();
         stage.close();
     }
