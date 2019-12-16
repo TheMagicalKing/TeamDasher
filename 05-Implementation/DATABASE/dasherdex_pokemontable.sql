@@ -1,3 +1,21 @@
+create table pokemontable
+(
+    id   int auto_increment
+        primary key,
+    name varchar(50) null,
+    type int         null,
+    constraint pokemontable_typetable_id_fk
+        foreign key (type) references typetable (id)
+);
+
+
+create table typetable
+(
+    id   int auto_increment
+        primary key,
+    type varchar(10) null
+);
+
 INSERT INTO dasherdex.typetable (id, type) VALUES (1, 'Normal');
 INSERT INTO dasherdex.typetable (id, type) VALUES (2, 'Water');
 INSERT INTO dasherdex.typetable (id, type) VALUES (3, 'Ground');
