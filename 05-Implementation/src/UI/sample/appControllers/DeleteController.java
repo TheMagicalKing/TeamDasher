@@ -6,19 +6,18 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class DeleteController {
-
-    //Confirm delete button
     public Button confirmDeleteButton = new Button();
     DasherDexCon deletePokemon = new DasherDexCon();
 
-    public void confirmDeleteButtonAction(ActionEvent addButtonEvent) throws IOException {
+    public void confirmDeleteButtonAction(ActionEvent addButtonEvent) throws IOException, SQLException {
         Stage stage = (Stage) confirmDeleteButton.getScene().getWindow();
+     DasherDexCon delete = new DasherDexCon();
+     delete.DasherDexCon(0);
         stage.close();
     }
-
-    //Cancel delete button
     public Button regretDeleteButton = new Button();
 
     public void regretDeleteButtonAction(ActionEvent addButtonEvent) throws IOException {
