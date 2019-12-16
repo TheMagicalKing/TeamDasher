@@ -17,7 +17,6 @@ public class AddMenuController {
     public TextField addNameField = new TextField();
     public TextField addTypeField = new TextField();
 
-    Pokemon pi = new Pokemon();
     DasherDexCon addPokemon = new DasherDexCon();
 
     public void addedButtonAction(ActionEvent addButtonEvent) throws IOException, SQLException {

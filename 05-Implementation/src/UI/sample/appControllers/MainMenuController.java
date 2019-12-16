@@ -18,44 +18,34 @@ import java.sql.SQLException;
 
 public class MainMenuController {
 
-    //Drop down search menu
-    public MenuButton searchDropDown = new MenuButton();
-
-    String searchParameter = "name";
-
-    public MenuItem menuItem1 = new MenuItem();
-
-    public void item1On(ActionEvent itemEvent1) throws IOException {
-        searchDropDown.setText("Search Parameter (Name)");
-        searchParameter = "name";
-    }
-
-    public MenuItem menuItem2 = new MenuItem();
-
-    public void item2On(ActionEvent itemEvent2) throws IOException {
-        searchDropDown.setText("Search Parameter (Type)");
-        searchParameter = "type";
-    }
-    /* Not in use, and might not be used.
-
-    public MenuItem menuItem3 = new MenuItem();
-
-    public void item3On(ActionEvent itemEvent3) throws IOException {
-        searchDropDown.setText("Evolution");
-    }
-
-    public MenuItem menuItem4 = new MenuItem();
-
-    public void item4On(ActionEvent itemEvent4) throws IOException {
-        searchDropDown.setText("Weakness");
-    }
-    */
-
     //Search button
-    public Button searchButton = new Button();
+    @FXML
+    public Button searchNameButton = new Button();
+    @FXML
+    public Button searchTypeButton = new Button();
+    @FXML
+    public TextField searchTypeTextField = new TextField();
+    @FXML
+    public TextField searchNameTextField = new TextField();
 
-    public void searchAction(ActionEvent searchEvent) throws IOException {
 
+    public void searchNameAction(ActionEvent searchEvent) throws SQLException {
+
+        ObservableList<Pokemon> searchList = Pokemon.searchDasherDexName(searchNameTextField.getText());
+
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        typeColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
+
+        dasherDexTable.setItems(searchList);
+    }
+    public void searchTypeAction(ActionEvent searchEvent) throws SQLException {
+
+        ObservableList<Pokemon> searchList = Pokemon.searchDasherDexType(searchTypeTextField.getText());
+
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        typeColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
+
+        dasherDexTable.setItems(searchList);
     }
 
     //Edit button
@@ -116,16 +106,15 @@ public class MainMenuController {
     @FXML
     TableView<Pokemon> dasherDexTable;
     @FXML
-    TableColumn<Pokemon, String> nameColumn;
+    TableColumn<Object, Object> nameColumn;
     @FXML
-    TableColumn<Pokemon, String> typeColumn;
+    TableColumn<Object, Object> typeColumn;
 
     //Update button
     @FXML
     Button updateTableButton = new Button();
 
-
-    public void updateTableButtonAction(ActionEvent updateTableEvent) throws IOException, SQLException {
+    public void updateTableButtonAction(ActionEvent updateTableEvent) throws SQLException {
         ObservableList<Pokemon> list = Pokemon.initializeDasherDex();
 
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -133,5 +122,4 @@ public class MainMenuController {
 
         dasherDexTable.setItems(list);
     }
-
 }
