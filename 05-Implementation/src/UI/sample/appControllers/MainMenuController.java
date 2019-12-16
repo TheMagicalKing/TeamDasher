@@ -5,43 +5,56 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
-import java.sql.ResultSet;
 
 public class MainMenuController {
+
+    //Drop down search menu
+    public MenuButton searchDropDown = new MenuButton();
+
+    String searchParameter = "name";
 
     public MenuItem menuItem1 = new MenuItem();
 
     public void item1On(ActionEvent itemEvent1) throws IOException {
-        menuItem1.setText("Element");
+        searchDropDown.setText("Search Parameter (Name)");
+        searchParameter = "name";
     }
 
     public MenuItem menuItem2 = new MenuItem();
 
     public void item2On(ActionEvent itemEvent2) throws IOException {
-        menuItem2.setText("Evolution");
+        searchDropDown.setText("Search Parameter (Type)");
+        searchParameter = "type";
     }
+    /* Not in use, and might not be used.
 
     public MenuItem menuItem3 = new MenuItem();
 
     public void item3On(ActionEvent itemEvent3) throws IOException {
-        menuItem3.setText("Weakness");
+        searchDropDown.setText("Evolution");
     }
 
+    public MenuItem menuItem4 = new MenuItem();
+
+    public void item4On(ActionEvent itemEvent4) throws IOException {
+        searchDropDown.setText("Weakness");
+    }
+    */
+
+    //Search button
     public Button searchButton = new Button();
 
     public void searchAction(ActionEvent searchEvent) throws IOException {
 
     }
 
+    //Edit button
     public Button editButton = new Button();
 
     public void editAction(ActionEvent editEvent) throws IOException {
@@ -59,6 +72,7 @@ public class MainMenuController {
         }
     }
 
+    //Add button
     public Button addButton = new Button();
 
     public void addAction(ActionEvent addEvent) throws IOException {
@@ -75,6 +89,8 @@ public class MainMenuController {
             e.printStackTrace();
         }
     }
+
+    //Delete button
     public Button deleteButton = new Button();
 
     public void deleteAction(ActionEvent deleteEvent) throws IOException {
@@ -92,12 +108,15 @@ public class MainMenuController {
         }
     }
 
+    //TableView
+    @FXML
     TableView dasherDexTable = new TableView();
     @FXML
     TableColumn nameColumn = new TableColumn();
     @FXML
     TableColumn typeColumn = new TableColumn();
 
+    //Update button
     @FXML
     Button updateTableButton = new Button();
 

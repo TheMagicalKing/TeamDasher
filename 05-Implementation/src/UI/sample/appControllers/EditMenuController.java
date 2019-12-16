@@ -7,6 +7,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class    EditMenuController {
+
+    //Edit button action
     public Button editedButton = new Button();
 
     public void editedButtonAction(ActionEvent addButtonEvent) throws IOException {
