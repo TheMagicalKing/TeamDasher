@@ -1,21 +1,21 @@
 package Logic;
 
 public enum Type {
-    NORMAL(1),
-    WATER(2),
-    GROUND(3),
-    ELECTRIC(4),
-    GRASS(5),
-    FLYING(6),
-    POISON(7),
-    FIGHTING(8),
-    ROCK(9),
-    BUG(10),
-    GHOST(11),
-    FIRE(12),
-    ICE(13),
-    PSYCHIC(14),
-    DRAGON(15);
+    NORMAL(0),
+    WATER(1),
+    GROUND(2),
+    ELECTRIC(3),
+    GRASS(4),
+    FLYING(5),
+    POISON(6),
+    FIGHTING(7),
+    ROCK(8),
+    BUG(9),
+    GHOST(10),
+    FIRE(11),
+    ICE(12),
+    PSYCHIC(13),
+    DRAGON(14);
 
     private int value;
 
