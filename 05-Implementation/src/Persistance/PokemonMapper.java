@@ -1,4 +1,8 @@
 package Persistance;
+import Logic.Pokemon;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.sql.*;
 
 public class PokemonMapper {
@@ -55,6 +59,20 @@ public class PokemonMapper {
         }
         int pid = 0;
         return pid;
+    }
+
+    public static ObservableList<Pokemon> getPokemon() throws SQLException {
+        ObservableList<Pokemon> oblist = FXCollections.observableArrayList();
+
+        Connection conn = DBCon.getConnectionDB();
+        String queryString = "select * from pokemontable";
+        PreparedStatement ps = conn.prepareStatement(queryString);
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()) {
+            oblist.add(new Pokemon(rs.getString("name"), rs.getString("type")));
+        }
+
+        return oblist;
     }
 
     public void choosePokemon(String name, String type) {}

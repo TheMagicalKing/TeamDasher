@@ -1,16 +1,20 @@
 package UI.sample.appControllers;
 
+import Logic.Pokemon;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class MainMenuController {
 
@@ -110,17 +114,24 @@ public class MainMenuController {
 
     //TableView
     @FXML
-    TableView dasherDexTable = new TableView();
+    TableView<Pokemon> dasherDexTable;
     @FXML
-    TableColumn nameColumn = new TableColumn();
+    TableColumn<Pokemon, String> nameColumn;
     @FXML
-    TableColumn typeColumn = new TableColumn();
+    TableColumn<Pokemon, String> typeColumn;
 
     //Update button
     @FXML
     Button updateTableButton = new Button();
 
-    public void updateTableButtonAction(ActionEvent updateTableEvent) throws IOException {
 
+    public void updateTableButtonAction(ActionEvent updateTableEvent) throws IOException, SQLException {
+        ObservableList<Pokemon> list = Pokemon.initializeDasherDex();
+
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        typeColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
+
+        dasherDexTable.setItems(list);
     }
+
 }

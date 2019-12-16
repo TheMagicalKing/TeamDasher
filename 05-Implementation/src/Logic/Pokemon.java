@@ -1,6 +1,9 @@
 package Logic;
 
+import javafx.collections.ObservableList;
+
 import javax.xml.namespace.QName;
+import java.sql.SQLException;
 
 public class Pokemon {
 
@@ -12,9 +15,14 @@ public class Pokemon {
     this.type = "";
     }
 
-    public Pokemon (String name, String type){}
+    public Pokemon (String name, String type){
+    this.name = name;
+    this.type = type;
+    }
 
-    public static void initializeDasherDex() {}
+    public static ObservableList<Pokemon> initializeDasherDex() throws SQLException {
+        return Persistance.PokemonMapper.getPokemon();
+    }
 
     public String getName() {return name;}
 
