@@ -33,7 +33,7 @@ public class PokemonMapper {
 
     }
 
-    public void deletePokemon(int pid) throws SQLException {
+    public static void deletePokemon(int pid) throws SQLException {
         // Mangler enten FindPokemon() eller chosePokemon()
         String queryString = "DELETE * FROM pokemontable WHERE pid="+ pid +";";
         prestmt = conDB.prepareStatement(queryString);
