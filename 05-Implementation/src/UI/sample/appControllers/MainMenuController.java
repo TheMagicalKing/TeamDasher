@@ -17,7 +17,7 @@ public class MainMenuController {
     //Drop down search menu
     public MenuButton searchDropDown = new MenuButton();
 
-    String searchParameter = null;
+    String searchParameter = "name";
 
     public MenuItem menuItem1 = new MenuItem();
 
