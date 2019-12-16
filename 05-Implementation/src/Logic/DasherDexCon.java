@@ -8,6 +8,9 @@ public class DasherDexCon  {
         DBFacade addPokemon = new DBFacade();
         addPokemon.DBFacade(name,type);
     }
+
+
+
     public static void main(String[] args) throws SQLException {
 
     }

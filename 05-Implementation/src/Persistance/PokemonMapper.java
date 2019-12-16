@@ -37,7 +37,7 @@ public class PokemonMapper {
 
     }
 
-    public static void findPokemon(String searchTerm, String userinput) throws SQLException {
+    public static int findPokemon(String searchTerm, String userinput) throws SQLException {
         conDB = DBCon.getConnectionDB();
         String queryString="select * from pokemontable where ? like '%'?'%';";
         prestmt = conDB.prepareStatement(queryString);
@@ -49,6 +49,8 @@ public class PokemonMapper {
             String ptype = result.getString("type");
             System.out.println(pname + ptype);
         }
+        int pid = 0;
+        return pid;
     }
 
     public void choosePokemon(String name, String type) {

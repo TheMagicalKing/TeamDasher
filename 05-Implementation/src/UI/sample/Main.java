@@ -18,7 +18,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("resources/MainMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("resources/MainMenu2.fxml"));
         primaryStage.setTitle("DasherDex");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
