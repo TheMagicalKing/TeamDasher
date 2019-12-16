@@ -1,6 +1,7 @@
 package UI.sample.appControllers;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -92,10 +93,13 @@ public class MainMenuController {
     }
 
     TableView dasherDexTable = new TableView();
+    @FXML
     TableColumn nameColumn = new TableColumn();
+    @FXML
     TableColumn typeColumn = new TableColumn();
     TableColumn evolutionColumn = new TableColumn();
     TableColumn weaknessColumn = new TableColumn();
+    @FXML
     Button updateTableButton = new Button();
 
     public void updateTableButtonAction(ActionEvent updateTableEvent) throws IOException {
