@@ -15,7 +15,6 @@ public class DeleteController {
 
     public void confirmDeleteButtonAction(ActionEvent addButtonEvent) throws IOException {
         Stage stage = (Stage) confirmDeleteButton.getScene().getWindow();
-
         stage.close();
     }
 

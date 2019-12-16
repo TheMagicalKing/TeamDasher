@@ -17,16 +17,20 @@ public class MainMenuController {
     //Drop down search menu
     public MenuButton searchDropDown = new MenuButton();
 
+    String searchParameter = new String;
+
     public MenuItem menuItem1 = new MenuItem();
 
     public void item1On(ActionEvent itemEvent1) throws IOException {
         searchDropDown.setText("Name");
+        searchParameter = "name";
     }
 
     public MenuItem menuItem2 = new MenuItem();
 
     public void item2On(ActionEvent itemEvent2) throws IOException {
         searchDropDown.setText("Type");
+        searchParameter = "type";
     }
     /* Not in use, and might not be used.
 
