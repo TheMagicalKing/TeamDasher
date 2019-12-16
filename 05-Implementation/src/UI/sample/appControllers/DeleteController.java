@@ -8,6 +8,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class DeleteController {
+
+    //Confirm delete button
     public Button confirmDeleteButton = new Button();
     DasherDexCon deletePokemon = new DasherDexCon();
 
@@ -16,6 +18,8 @@ public class DeleteController {
 
         stage.close();
     }
+
+    //Cancel delete button
     public Button regretDeleteButton = new Button();
 
     public void regretDeleteButtonAction(ActionEvent addButtonEvent) throws IOException {
