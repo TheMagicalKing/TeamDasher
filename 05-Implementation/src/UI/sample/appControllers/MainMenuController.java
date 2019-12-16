@@ -22,14 +22,14 @@ public class MainMenuController {
     public MenuItem menuItem1 = new MenuItem();
 
     public void item1On(ActionEvent itemEvent1) throws IOException {
-        searchDropDown.setText("Name");
+        searchDropDown.setText("Search Parameter (Name)");
         searchParameter = "name";
     }
 
     public MenuItem menuItem2 = new MenuItem();
 
     public void item2On(ActionEvent itemEvent2) throws IOException {
-        searchDropDown.setText("Type");
+        searchDropDown.setText("Search Parameter (Type)");
         searchParameter = "type";
     }
     /* Not in use, and might not be used.
