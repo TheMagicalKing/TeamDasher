@@ -1,7 +1,12 @@
 package Persistance;
+import Logic.Pokemon;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.sql.*;
 
 public class PokemonMapper {
+
 
     private static Connection conDB;
     private static PreparedStatement prestmt;
@@ -10,7 +15,7 @@ public class PokemonMapper {
     public static int addPokemon() throws SQLException {
 
         conDB = DBCon.getConnectionDB();
-        String queryString="insert into pokemontable(name, type) values('','');";
+        String queryString = "insert into pokemontable(name, type) values('','');";
         prestmt = conDB.prepareStatement(queryString);
         prestmt.execute();
         queryString = "select pid from pokemontable order by pid desc limit 1;";
@@ -25,7 +30,7 @@ public class PokemonMapper {
 
     public static void specifyPokemon(String name, String type, int pid) throws SQLException {
 
-        String queryString="update pokemontable set name=?, type=? where pid = "+ pid +";";
+        String queryString = "update pokemontable set name=?, type=? where pid = " + pid + ";";
         prestmt = conDB.prepareStatement(queryString);
         prestmt.setString(1, name);
         prestmt.setString(2, type);
@@ -37,12 +42,24 @@ public class PokemonMapper {
 
     }
 
-    public void findPokemon(String searchTerm, String userinput) {
+    public static void findPokemon(String searchTerm, String userinput) {
 
     }
 
-    public void choosePokemon(String name, String type) {
+    public static ObservableList<Pokemon> getPokemon() throws SQLException {
+        ObservableList<Pokemon> oblist = FXCollections.observableArrayList();
 
+        Connection conn = DBCon.getConnectionDB();
+        String queryString = "select * from pokemontable";
+        PreparedStatement ps = conn.prepareStatement(queryString);
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()) {
+            oblist.add(new Pokemon(rs.getString("name"), rs.getString("type")));
+        }
+
+        return oblist;
+    }
+    public void choosePokemon(String name, String type) {
 
     }
 }

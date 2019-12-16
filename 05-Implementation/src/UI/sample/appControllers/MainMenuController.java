@@ -1,6 +1,10 @@
 package UI.sample.appControllers;
 
+import Logic.Pokemon;
+import Persistance.PokemonMapper;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -8,12 +12,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class MainMenuController {
 
@@ -90,15 +96,25 @@ public class MainMenuController {
             e.printStackTrace();
         }
     }
+ @FXML
+    TableView<Pokemon> dasherDexTable;
+    @FXML
+    TableColumn<Pokemon, String> nameColumn;
+    @FXML
+    TableColumn<Pokemon, String> typeColumn;
+    @FXML
+    TableColumn evolutionColumn;
+    @FXML
+    TableColumn weaknessColumn;
+    @FXML
+    Button updateTableButton;
 
-    TableView dasherDexTable = new TableView();
-    TableColumn nameColumn = new TableColumn();
-    TableColumn typeColumn = new TableColumn();
-    TableColumn evolutionColumn = new TableColumn();
-    TableColumn weaknessColumn = new TableColumn();
-    Button updateTableButton = new Button();
+    public void updateTableButtonAction(ActionEvent updateTableEvent) throws IOException, SQLException {
+        ObservableList<Pokemon> list = Pokemon.initializeDasherDex();
 
-    public void updateTableButtonAction(ActionEvent updateTableEvent) throws IOException {
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        typeColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
 
+        dasherDexTable.setItems(list);
     }
 }
