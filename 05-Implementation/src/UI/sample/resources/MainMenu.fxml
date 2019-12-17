@@ -23,9 +23,9 @@
                   <Image url="@../../pictures/dasherBackground.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="140.0" fitWidth="194.0" layoutX="120.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="140.0" fitWidth="287.0" layoutX="93.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../pictures/dasherDexRecolorSquareGit.png" />
+                  <Image url="@../../pictures/menudexgit.png" />
                </image>
             </ImageView>
             <Label layoutX="664.0" layoutY="203.0" text="*Error Message*" textFill="RED" visible="false" />
