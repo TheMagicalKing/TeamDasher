@@ -3,8 +3,6 @@ package Persistance;
 import Logic.Pokemon;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
-import javax.swing.table.TableColumn;
 import java.sql.*;
 
 public class PokemonMapper {
