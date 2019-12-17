@@ -15,7 +15,7 @@ public class DeleteController {
     public void confirmDeleteButtonAction(ActionEvent addButtonEvent) throws IOException, SQLException {
         Stage stage = (Stage) confirmDeleteButton.getScene().getWindow();
      DasherDexCon delete = new DasherDexCon();
-     delete.DasherDexCon(0);
+
         stage.close();
     }
     public Button regretDeleteButton = new Button();

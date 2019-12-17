@@ -40,10 +40,11 @@ public class PokemonMapper {
     }
 
     public static void deletePokemon(int pid) throws SQLException {
-        String queryString = "DELETE * FROM pokemontable WHERE pid="+ pid +";";
-        prestmt = conDB.prepareStatement(queryString);
-        prestmt.setInt(1,pid);
-        prestmt.executeUpdate();
+        Connection conn = DBCon.getConnectionDB();
+        String queryString = "DELETE FROM pokemontable WHERE pid= ?;";
+        prestmt = conn.prepareStatement(queryString);
+        prestmt.setInt(1, pid);
+        prestmt.execute();
 
     }
     public static ObservableList<Pokemon> findPokemonName(String searchTerm) throws SQLException {
@@ -56,7 +57,7 @@ public class PokemonMapper {
         System.out.println(ps);
         ResultSet rs = ps.executeQuery();
         while (rs.next()) {
-            pokemonList.add(new Pokemon(rs.getString("name"), rs.getInt("type")));
+            pokemonList.add(new Pokemon(rs.getString("name"), rs.getInt("type"), rs.getInt("pid")));
         }
         return pokemonList;
     }
@@ -70,7 +71,7 @@ public class PokemonMapper {
         System.out.println(ps);
         ResultSet rs = ps.executeQuery();
         while (rs.next()) {
-            pokemonList.add(new Pokemon(rs.getString("name"), rs.getInt("type")));
+            pokemonList.add(new Pokemon(rs.getString("name"), rs.getInt("type"), rs.getInt("pid")));
         }
         return pokemonList;
     }
@@ -80,12 +81,11 @@ public class PokemonMapper {
 
         Connection conn = DBCon.getConnectionDB();
         String queryString = "select * from pokemontable";
-        PreparedStatement ps = conn.prepareStatement(queryString);
-        ResultSet rs = ps.executeQuery();
-        while (rs.next()) {
-            oblist.add(new Pokemon(rs.getString("name"), rs.getInt("type")));
+        prestmt = conn.prepareStatement(queryString);
+        result = prestmt.executeQuery();
+        while (result.next()) {
+            oblist.add(new Pokemon(result.getString("name"), result.getInt("type"), result.getInt("pid")));
         }
-
         return oblist;
     }
 

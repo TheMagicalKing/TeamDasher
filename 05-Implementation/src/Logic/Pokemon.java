@@ -9,18 +9,20 @@ public class Pokemon {
 
     private String name;
     private int type;
+    private int pid;
 
     public Pokemon (){
     this.name = "";
     this.type = 0;
     }
 
-    public Pokemon (String name, int type){
-    this.name = name;
-    this.type = type;
+    public Pokemon (String name, int type, Integer pid) {
+        this.name = name;
+        this.type = type;
+        this.pid = pid;
     }
 
-    public static ObservableList<Pokemon> initializeDasherDex() throws SQLException {
+        public static ObservableList<Pokemon> initializeDasherDex() throws SQLException {
         return Persistance.PokemonMapper.getPokemon();
     }
 
@@ -30,6 +32,8 @@ public static ObservableList<Pokemon> searchDasherDexName(String searchTerm) thr
     public static ObservableList<Pokemon> searchDasherDexType(String searchTerm) throws SQLException {
         return Persistance.PokemonMapper.findPokemonType(searchTerm);
     }
+
+    public int getPid() {return pid;}
 
     public String getName() {return name;}
 
