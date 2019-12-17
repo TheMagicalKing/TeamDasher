@@ -1,0 +1,12 @@
+#hBoxType {
+    -fx-background-color: green;
+    background-color: green;
+}
+#hBoxName {
+    -fx-background-color: green;
+    background-color: green;
+}
+#vBoxSearch {
+    -fx-background-color: red;
+    background-color: red;
+}

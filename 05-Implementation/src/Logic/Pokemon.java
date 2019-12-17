@@ -17,10 +17,6 @@ public class Pokemon {
     public static ObservableList<Pokemon> initializeDasherDex() throws SQLException {
         return Persistance.PokemonMapper.getPokemon();
     }
-/*
-    public static ObservableList<Pokemon> searchDasherDex(String searchParameter, String searchTerm) throws SQLException {
-        return Persistance.PokemonMapper.findPokemon(searchParameter, searchTerm);
-    } */
 
 public static ObservableList<Pokemon> searchDasherDexName(String searchTerm) throws SQLException {
     return Persistance.PokemonMapper.findPokemonName(searchTerm);

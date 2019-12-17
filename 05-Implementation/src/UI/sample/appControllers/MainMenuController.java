@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.HBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -28,6 +29,37 @@ public class MainMenuController {
     @FXML
     public TextField searchNameTextField = new TextField();
 
+    //Drop Down Menu
+    @FXML
+    public MenuButton searchParameterDropDown = new MenuButton();
+    @FXML
+    public MenuItem dropDownItem1 = new MenuItem();
+    @FXML
+    public MenuItem dropDownItem2 = new MenuItem();
+    @FXML
+    public HBox hBoxType = new HBox();
+    @FXML
+    public HBox hBoxName = new HBox();
+
+    public void item1On(ActionEvent searchNameEvent) throws SQLException {
+        /*searchTypeTextField.setVisible(false);
+        searchTypeButton.setVisible(false);
+        searchNameTextField.setVisible(true);
+        searchNameButton.setVisible(true);*/
+        hBoxType.setVisible(false);
+        hBoxName.setVisible(true);
+        searchParameterDropDown.setText("Search Parameter: Name");
+    }
+
+    public void item2On(ActionEvent searchTypeEvent) throws SQLException {
+        /*searchNameTextField.setVisible(false);
+        searchNameButton.setVisible(false);
+        searchTypeTextField.setVisible(true);
+        searchTypeButton.setVisible(true);*/
+        hBoxType.setVisible(true);
+        hBoxName.setVisible(false);
+        searchParameterDropDown.setText("Search Parameter: Type");
+    }
 
     public void searchNameAction(ActionEvent searchEvent) throws SQLException {
 
