@@ -2,14 +2,20 @@ package Logic;
 
 import javafx.collections.ObservableList;
 
+import javax.xml.namespace.QName;
 import java.sql.SQLException;
 
 public class Pokemon {
 
     private String name;
-    private String type;
+    private int type;
 
-    public Pokemon (String name, String type){
+    public Pokemon (){
+    this.name = "";
+    this.type = 0;
+    }
+
+    public Pokemon (String name, int type){
     this.name = name;
     this.type = type;
     }
@@ -29,9 +35,9 @@ public static ObservableList<Pokemon> searchDasherDexName(String searchTerm) thr
 
     public void setName(String name) {this.name = name;}
 
-    public String getType() {return type;}
+    public int getType() {return type;}
 
-    public void setType(String type) {
+    public void setType(int type) {
         
         this.type = type;
     }

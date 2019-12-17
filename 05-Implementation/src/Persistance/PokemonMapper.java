@@ -16,7 +16,7 @@ public class PokemonMapper {
     public static int addPokemon() throws SQLException {
 
         conDB = DBCon.getConnectionDB();
-        String queryString="insert into pokemontable(name, type) values('','');";
+        String queryString="insert into pokemontable(name, type) values('',0);";
         prestmt = conDB.prepareStatement(queryString);
         prestmt.execute();
         queryString = "select pid from pokemontable order by pid desc limit 1;";
@@ -83,7 +83,7 @@ public class PokemonMapper {
         PreparedStatement ps = conn.prepareStatement(queryString);
         ResultSet rs = ps.executeQuery();
         while (rs.next()) {
-            oblist.add(new Pokemon(rs.getString("name"), rs.getString("type")));
+            oblist.add(new Pokemon(rs.getString("name"), rs.getInt("type")));
         }
 
         return oblist;

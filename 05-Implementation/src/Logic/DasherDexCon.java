@@ -6,6 +6,7 @@ import java.sql.SQLException;
 public class DasherDexCon  {
     public void DasherDexCon(String name, int type) throws SQLException {
         DBFacade addPokemon = new DBFacade();
+        System.out.println(type);
         addPokemon.DBFacade(name,type);
     }
     public void DasherDexCon(int pid) throws SQLException {
