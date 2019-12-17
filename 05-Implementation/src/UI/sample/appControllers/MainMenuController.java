@@ -42,20 +42,12 @@ public class MainMenuController {
     public HBox hBoxName = new HBox();
 
     public void item1On(ActionEvent searchNameEvent) throws SQLException {
-        /*searchTypeTextField.setVisible(false);
-        searchTypeButton.setVisible(false);
-        searchNameTextField.setVisible(true);
-        searchNameButton.setVisible(true);*/
         hBoxType.setVisible(false);
         hBoxName.setVisible(true);
         searchParameterDropDown.setText("Search Parameter: Name");
     }
 
     public void item2On(ActionEvent searchTypeEvent) throws SQLException {
-        /*searchNameTextField.setVisible(false);
-        searchNameButton.setVisible(false);
-        searchTypeTextField.setVisible(true);
-        searchTypeButton.setVisible(true);*/
         hBoxType.setVisible(true);
         hBoxName.setVisible(false);
         searchParameterDropDown.setText("Search Parameter: Type");
