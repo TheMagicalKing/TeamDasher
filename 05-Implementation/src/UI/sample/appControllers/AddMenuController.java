@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import javafx.scene.control.SelectionModel;
 
 
+import javax.swing.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -24,8 +25,9 @@ public class AddMenuController {
     public TextField addNameField = new TextField();
     public ComboBox comboSelect = new ComboBox();
 
+
     public void addComboItem(ActionEvent typeSelect){
-        comboSelect.getItems().addAll("Normal","Water");
+        //comboSelect.getItems().addAll("Normal","Water");
     }
 
     DasherDexCon addPokemon = new DasherDexCon();
@@ -34,23 +36,29 @@ public class AddMenuController {
         int typeNumber = 0;
 
 
-        Type types = Type.BLANK;
-
-        String selectedItem = String.valueOf(comboSelect.getSelectionModel().getSelectedItem());
 
 
+        Object selectedItem = comboSelect.selectionModelProperty().getValue();
+        TextField s = comboSelect.getEditor();
 
-        switch(comboSelect.getValue().toString()) {
+        System.out.println(selectedItem);
+        System.out.println(s);
+       /*switch(""+selectedItem+"") {
             case "NORMAL":
                 typeNumber = 1;
                 System.out.println(typeNumber);
                 break;
         }
-        System.out.println(selectedItem);
-        System.out.println(typeNumber);
-        addPokemon.DasherDexCon(addNameField.getText(),typeNumber);
-        Stage stage = (Stage) addedButton.getScene().getWindow();
+       boolean x = false;
 
-        stage.close();
+            if (x == true){
+            System.out.println(selectedItem);
+            System.out.println(typeNumber);
+            addPokemon.DasherDexCon(addNameField.getText(),typeNumber);
+            Stage stage = (Stage) addedButton.getScene().getWindow();
+            stage.close();}*/
+
+
+
     }
 }
