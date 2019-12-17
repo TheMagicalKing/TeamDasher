@@ -96,8 +96,6 @@ public class MainMenuController {
 
     public void addAction(ActionEvent addEvent) throws IOException {
         try {
-            ComboBox comboSelect = new ComboBox();
-            comboSelect.getItems().add("NORMAL");
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/AddMenu.fxml"));
             Parent addMenuParent = (Parent) fxmlLoader.load();
             Stage addStage = new Stage();
@@ -139,9 +137,9 @@ public class MainMenuController {
     @FXML
     TableView<Pokemon> dasherDexTable;
     @FXML
-    TableColumn<Object, Object> nameColumn;
+    TableColumn<Pokemon, String> nameColumn;
     @FXML
-    TableColumn<Object, Object> typeColumn;
+    TableColumn<Pokemon, String> typeColumn;
 
     //Update button
     @FXML

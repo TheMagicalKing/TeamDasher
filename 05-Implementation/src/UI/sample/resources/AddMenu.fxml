@@ -44,25 +44,25 @@
          <children>
             <TextField fx:id="addNameField" GridPane.rowIndex="1" />
             <ComboBox fx:id="TypeSelect"  prefWidth="150.0" visibleRowCount="6" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                    <items>
-                        <FXCollections fx:factory="observableArrayList">
-                            <String fx:value="NORMAL"/>
-                            <String fx:value="WATER"/>
-                            <String fx:value="GROUND"/>
-                            <String fx:value="ELECTRIC"/>
-                            <String fx:value="GRASS"/>
-                            <String fx:value="FLYING"/>
-                            <String fx:value="POISON"/>
-                            <String fx:value="FIGHTING"/>
-                            <String fx:value="ROCK"/>
-                            <String fx:value="BUG"/>
-                            <String fx:value="GHOST"/>
-                            <String fx:value="FIRE"/>
-                            <String fx:value="ICE"/>
-                            <String fx:value="PSYCHIC"/>
-                            <String fx:value="DRAGON"/>
-                        </FXCollections>
-                    </items>
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="NORMAL"/>
+                        <String fx:value="WATER"/>
+                        <String fx:value="GROUND"/>
+                        <String fx:value="ELECTRIC"/>
+                        <String fx:value="GRASS"/>
+                        <String fx:value="FLYING"/>
+                        <String fx:value="POISON"/>
+                        <String fx:value="FIGHTING"/>
+                        <String fx:value="ROCK"/>
+                        <String fx:value="BUG"/>
+                        <String fx:value="GHOST"/>
+                        <String fx:value="FIRE"/>
+                        <String fx:value="ICE"/>
+                        <String fx:value="PSYCHIC"/>
+                        <String fx:value="DRAGON"/>
+                    </FXCollections>
+                </items>
             </ComboBox>
             <Label contentDisplay="CENTER" text="Name" />
             <Label text="Type" GridPane.columnIndex="1" />
