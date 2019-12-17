@@ -14,6 +14,12 @@ public class DasherDexCon  {
     }
 
     public static void main(String[] args) throws SQLException {
-
+        Type types = Type.BLANK;
+        switch(types) {
+            case NORMAL:
+                break;
+            case ELECTRIC:
+                break;
+        }
     }
 }
