@@ -1,5 +1,6 @@
 package UI.sample.appControllers;
 
+import Logic.DasherDexCon;
 import Logic.Pokemon;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -42,20 +43,12 @@ public class MainMenuController {
     public HBox hBoxName = new HBox();
 
     public void item1On(ActionEvent searchNameEvent) throws SQLException {
-        /*searchTypeTextField.setVisible(false);
-        searchTypeButton.setVisible(false);
-        searchNameTextField.setVisible(true);
-        searchNameButton.setVisible(true);*/
         hBoxType.setVisible(false);
         hBoxName.setVisible(true);
         searchParameterDropDown.setText("Search Parameter: Name");
     }
 
     public void item2On(ActionEvent searchTypeEvent) throws SQLException {
-        /*searchNameTextField.setVisible(false);
-        searchNameButton.setVisible(false);
-        searchTypeTextField.setVisible(true);
-        searchTypeButton.setVisible(true);*/
         hBoxType.setVisible(true);
         hBoxName.setVisible(false);
         searchParameterDropDown.setText("Search Parameter: Type");
@@ -119,6 +112,7 @@ public class MainMenuController {
     //Delete button
     public Button deleteButton = new Button();
 
+    DasherDexCon deletePokemon = new DasherDexCon();
     public void deleteAction(ActionEvent deleteEvent) throws IOException {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/deleteWarning.fxml"));
@@ -128,6 +122,11 @@ public class MainMenuController {
             deleteStage.initStyle(StageStyle.UTILITY);
             deleteStage.setTitle("Confirm Deletion");
             deleteStage.setScene(new Scene(deleteParent));
+             if (dasherDexTable.getSelectionModel().getSelectedItem() != null) {
+                deletePokemon.DasherDexCon(dasherDexTable.getSelectionModel().getSelectedItem().getPid());
+                 System.out.println(dasherDexTable.getSelectionModel().getSelectedItem().getPid());
+             }
+
             deleteStage.show();
         } catch (Exception e) {
             e.printStackTrace();

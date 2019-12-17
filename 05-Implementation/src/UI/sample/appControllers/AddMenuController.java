@@ -33,8 +33,7 @@ public class AddMenuController {
     DasherDexCon addPokemon = new DasherDexCon();
 
     public void addedButtonAction(ActionEvent addButtonEvent) throws IOException, SQLException {
-        int typeNumber = 0;
-
+        int typeNumber = 1;
 
 
 

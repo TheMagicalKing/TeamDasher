@@ -15,7 +15,7 @@
          <children>
             <HBox prefHeight="194.0" prefWidth="600.0">
                <children>
-                  <Label prefHeight="202.0" prefWidth="415.0" text="Are you sure that you wanna DELETE this beloved pokemonDao of yours?">
+                  <Label prefHeight="202.0" prefWidth="415.0" text="Are you sure that you wanna DELETE this beloved pokemon of yours?">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
