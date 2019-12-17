@@ -11,7 +11,7 @@ public class Pokemon {
     private int type;
     private int pid;
 
-    public Pokemon (){
+    public Pokemon(String name, String type){
     this.name = "";
     this.type = 0;
     }
