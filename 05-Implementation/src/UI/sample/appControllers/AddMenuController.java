@@ -31,21 +31,18 @@ public class AddMenuController {
     DasherDexCon addPokemon = new DasherDexCon();
 
     public void addedButtonAction(ActionEvent addButtonEvent) throws IOException, SQLException {
-        int typeNumber = 0;
-
+        int typeNumber = 1;
 
         Type types = Type.BLANK;
 
         String selectedItem = String.valueOf(comboSelect.getSelectionModel().getSelectedItem());
 
-
-
-        switch(comboSelect.getValue().toString()) {
+        /*switch(comboSelect.getValue().toString()) {
             case "NORMAL":
                 typeNumber = 1;
                 System.out.println(typeNumber);
                 break;
-        }
+        }*/
         System.out.println(selectedItem);
         System.out.println(typeNumber);
         addPokemon.DasherDexCon(addNameField.getText(),typeNumber);
