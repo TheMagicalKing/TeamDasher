@@ -81,6 +81,8 @@ public class MainMenuController {
 
     public void addAction(ActionEvent addEvent) throws IOException {
         try {
+            ComboBox comboSelect = new ComboBox();
+            comboSelect.getItems().add("NORMAL");
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/AddMenu.fxml"));
             Parent addMenuParent = (Parent) fxmlLoader.load();
             Stage addStage = new Stage();
