@@ -56,7 +56,7 @@ public class PokemonMapper {
         System.out.println(ps);
         ResultSet rs = ps.executeQuery();
         while (rs.next()) {
-            pokemonList.add(new Pokemon(rs.getString("name"), rs.getString("type")));
+            pokemonList.add(new Pokemon(rs.getString("name"), rs.getInt("type")));
         }
         return pokemonList;
     }
@@ -70,7 +70,7 @@ public class PokemonMapper {
         System.out.println(ps);
         ResultSet rs = ps.executeQuery();
         while (rs.next()) {
-            pokemonList.add(new Pokemon(rs.getString("name"), rs.getString("type")));
+            pokemonList.add(new Pokemon(rs.getString("name"), rs.getInt("type")));
         }
         return pokemonList;
     }
