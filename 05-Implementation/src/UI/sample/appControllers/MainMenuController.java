@@ -124,7 +124,6 @@ public class MainMenuController {
             deleteStage.setScene(new Scene(deleteParent));
              if (dasherDexTable.getSelectionModel().getSelectedItem() != null) {
                 deletePokemon.DasherDexCon(dasherDexTable.getSelectionModel().getSelectedItem().getPid());
-                 System.out.println(dasherDexTable.getSelectionModel().getSelectedItem().getPid());
              }
 
             deleteStage.show();

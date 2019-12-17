@@ -6,9 +6,16 @@ import Logic.Type;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.ComboBoxBase;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.scene.control.SelectionModel;
 
 
+import javax.swing.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -63,6 +70,78 @@ public class AddMenuController {
         validate();
         System.out.println(selectedItem);
         System.out.println(typeNumber);
+        TextField s = comboSelect.getEditor();
+
+        System.out.println(selectedItem);
+        System.out.println(s);
+       switch(""+selectedItem+"") {
+           case "Normal":
+               typeNumber = 1;
+               System.out.println(typeNumber);
+               break;
+           case "WATER":
+               typeNumber = 2;
+               System.out.println(typeNumber);
+               break;
+           case "GROUND":
+               typeNumber = 3;
+               System.out.println(typeNumber);
+               break;
+           case "ELECTRIC":
+               typeNumber = 4;
+               System.out.println(typeNumber);
+               break;
+           case "GRASS":
+               typeNumber = 5;
+               System.out.println(typeNumber);
+               break;
+           case "FLYING":
+               typeNumber = 6;
+               System.out.println(typeNumber);
+               break;
+           case "POISON":
+               typeNumber = 7;
+               System.out.println(typeNumber);
+               break;
+           case "FIGHTING":
+               typeNumber = 8;
+               System.out.println(typeNumber);
+               break;
+           case "ROCK":
+               typeNumber = 9;
+               System.out.println(typeNumber);
+               break;
+           case "BUG":
+               typeNumber = 10;
+               System.out.println(typeNumber);
+               break;
+           case "GHOST":
+               typeNumber = 11;
+               System.out.println(typeNumber);
+               break;
+           case "FIRE":
+               typeNumber = 12;
+               System.out.println(typeNumber);
+               break;
+           case "ICE":
+               typeNumber = 13;
+               System.out.println(typeNumber);
+               break;
+           case "PSYCHIC":
+               typeNumber = 14;
+               System.out.println(typeNumber);
+               break;
+           case "DRAGON":
+               typeNumber = 15;
+               System.out.println(typeNumber);
+               break;
+        }
+       boolean x = false;
+
+        validate();
+        System.out.println(selectedItem);
+        System.out.println(typeNumber);
+
 
 
     }
