@@ -11,8 +11,12 @@ import java.sql.SQLException;
 public class DeleteController {
     public Button confirmDeleteButton = new Button();
     DasherDexCon deletePokemon = new DasherDexCon();
+    MainMenuController mainMenuControl = new MainMenuController();
 
     public void confirmDeleteButtonAction(ActionEvent addButtonEvent) throws IOException, SQLException {
+        deletePokemon.DasherDexCon(mainMenuControl.getSelectionModel());
+        System.out.println(mainMenuControl.getSelectionModel());
+
         Stage stage = (Stage) confirmDeleteButton.getScene().getWindow();
      DasherDexCon delete = new DasherDexCon();
 
