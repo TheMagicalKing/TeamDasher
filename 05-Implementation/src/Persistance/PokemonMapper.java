@@ -1,8 +1,10 @@
 package Persistance;
+
 import Logic.Pokemon;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import javax.swing.table.TableColumn;
 import java.sql.*;
 
 public class PokemonMapper {
@@ -43,22 +45,34 @@ public class PokemonMapper {
         prestmt.setInt(1,pid);
         prestmt.executeUpdate();
 
-        }
+    }
+    public static ObservableList<Pokemon> findPokemonName(String searchTerm) throws SQLException {
+        ObservableList<Pokemon> pokemonList = FXCollections.observableArrayList();
 
-    public static int findPokemon(String searchTerm, String userinput) throws SQLException {
-        conDB = DBCon.getConnectionDB();
-        String queryString="select * from pokemontable where ? like '%'?'%';";
-        prestmt = conDB.prepareStatement(queryString);
-        prestmt.setString(1, searchTerm);
-        prestmt.setString(2, userinput);
-        prestmt.executeQuery();
-        while(result.next()){
-            String pname = result.getString("name");
-            String ptype = result.getString("type");
-            System.out.println(pname + ptype);
+        Connection conn = DBCon.getConnectionDB();
+        String queryString = "SELECT * from pokemontable where name LIKE ?";
+        PreparedStatement ps = conn.prepareStatement(queryString);
+        ps.setString(1, "%" + searchTerm + "%");
+        System.out.println(ps);
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()) {
+            pokemonList.add(new Pokemon(rs.getString("name"), rs.getString("type")));
         }
-        int pid = 0;
-        return pid;
+        return pokemonList;
+    }
+    public static ObservableList<Pokemon> findPokemonType(String searchTerm) throws SQLException {
+        ObservableList<Pokemon> pokemonList = FXCollections.observableArrayList();
+
+        Connection conn = DBCon.getConnectionDB();
+        String queryString = "SELECT * from pokemontable where type LIKE ?";
+        PreparedStatement ps = conn.prepareStatement(queryString);
+        ps.setString(1, "%" + searchTerm + "%");
+        System.out.println(ps);
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()) {
+            pokemonList.add(new Pokemon(rs.getString("name"), rs.getString("type")));
+        }
+        return pokemonList;
     }
 
     public static ObservableList<Pokemon> getPokemon() throws SQLException {

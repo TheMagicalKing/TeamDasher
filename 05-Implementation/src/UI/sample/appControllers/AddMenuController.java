@@ -28,7 +28,6 @@ public class AddMenuController {
         comboSelect.getItems().addAll("Normal","Water");
     }
 
-    Pokemon pi = new Pokemon();
     DasherDexCon addPokemon = new DasherDexCon();
 
     public void addedButtonAction(ActionEvent addButtonEvent) throws IOException, SQLException {
