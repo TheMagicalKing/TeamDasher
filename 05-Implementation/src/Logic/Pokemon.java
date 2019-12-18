@@ -9,6 +9,7 @@ public class Pokemon {
 
     private String name;
     private int type;
+    private String typeord;
     private int pid;
 
     public Pokemon() {
@@ -19,6 +20,12 @@ public class Pokemon {
     public Pokemon(String name, int type, Integer pid) {
         this.name = name;
         this.type = type;
+        this.pid = pid;
+    }
+
+    public Pokemon(String name, String typeord, int pid) {
+        this.name = name;
+        this.typeord = typeord;
         this.pid = pid;
     }
 
@@ -53,5 +60,13 @@ public class Pokemon {
     public void setType(int type) {
 
         this.type = type;
+    }
+
+    public String getTypeord() {
+        return typeord;
+    }
+
+    public void setTypeord(String typeord) {
+        this.typeord = typeord;
     }
 }

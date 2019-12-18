@@ -77,14 +77,16 @@ public class PokemonMapper {
     }
 
     public static ObservableList<Pokemon> getPokemon() throws SQLException {
+        Pokemon pokemon = new Pokemon();
+        pokemon.setTypeord("type");
         ObservableList<Pokemon> oblist = FXCollections.observableArrayList();
 
         Connection conn = DBCon.getConnectionDB();
-        String queryString = "select * from pokemontable";
+        String queryString = "select name, pid, typetable.type from pokemontable, typetable where typetable.id = pokemontable.type;; ";
         prestmt = conn.prepareStatement(queryString);
         result = prestmt.executeQuery();
         while (result.next()) {
-            oblist.add(new Pokemon(result.getString("name"), result.getInt("type"), result.getInt("pid")));
+            oblist.add(new Pokemon(result.getString("name"), result.getString("type"), result.getInt("pid")));
         }
         return oblist;
     }

@@ -50,7 +50,6 @@ public class AddMenuController {
 
 
     public void addedButtonAction(ActionEvent addButtonEvent) throws IOException, SQLException {
-        Type types = Type.BLANK;
         String selectedItem = (String) TypeSelect.getValue();
 
 
