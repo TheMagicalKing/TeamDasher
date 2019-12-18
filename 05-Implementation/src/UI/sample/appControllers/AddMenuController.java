@@ -50,16 +50,9 @@ public class AddMenuController {
 
 
     public void addedButtonAction(ActionEvent addButtonEvent) throws IOException, SQLException {
+
         Type types = Type.BLANK;
         String selectedItem = (String) TypeSelect.getValue();
-
-
-        /*switch(comboSelect.getValue().toString()) {
-            case "NORMAL":
-                typeNumber = 1;
-                System.out.println(typeNumber);
-                break;
-        } */
 
         System.out.println(selectedItem);
         System.out.println(typeNumber);

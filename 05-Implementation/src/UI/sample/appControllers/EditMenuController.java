@@ -16,7 +16,7 @@ public class    EditMenuController {
     //Edit button action
     public Button editedButton = new Button();
     public TextField NameField = new TextField();
-    public ComboBox comboselect = new ComboBox();
+    public ComboBox TypeSelect = new ComboBox();
 
     public int typeNumber = 1;
     MainMenuController mainMenuControl = new MainMenuController();
@@ -47,11 +47,72 @@ public class    EditMenuController {
     }
 
     public void editedButtonAction(ActionEvent editedButtonEvent) throws IOException, SQLException {
-            int typeNumber = 1;
 
-            Object selectedItem = comboselect.selectionModelProperty().getValue();
-            TextField s = comboselect.getEditor();
+        String selectedItem = (String) TypeSelect.getValue();
+            TextField s = TypeSelect.getEditor();
 
+        switch(""+selectedItem+"") {
+            case "Normal":
+                typeNumber = 1;
+                System.out.println(typeNumber);
+                break;
+            case "WATER":
+                typeNumber = 2;
+                System.out.println(typeNumber);
+                break;
+            case "GROUND":
+                typeNumber = 3;
+                System.out.println(typeNumber);
+                break;
+            case "ELECTRIC":
+                typeNumber = 4;
+                System.out.println(typeNumber);
+                break;
+            case "GRASS":
+                typeNumber = 5;
+                System.out.println(typeNumber);
+                break;
+            case "FLYING":
+                typeNumber = 6;
+                System.out.println(typeNumber);
+                break;
+            case "POISON":
+                typeNumber = 7;
+                System.out.println(typeNumber);
+                break;
+            case "FIGHTING":
+                typeNumber = 8;
+                System.out.println(typeNumber);
+                break;
+            case "ROCK":
+                typeNumber = 9;
+                System.out.println(typeNumber);
+                break;
+            case "BUG":
+                typeNumber = 10;
+                System.out.println(typeNumber);
+                break;
+            case "GHOST":
+                typeNumber = 11;
+                System.out.println(typeNumber);
+                break;
+            case "FIRE":
+                typeNumber = 12;
+                System.out.println(typeNumber);
+                break;
+            case "ICE":
+                typeNumber = 13;
+                System.out.println(typeNumber);
+                break;
+            case "PSYCHIC":
+                typeNumber = 14;
+                System.out.println(typeNumber);
+                break;
+            case "DRAGON":
+                typeNumber = 15;
+                System.out.println(typeNumber);
+                break;
+        }
             validate();
 
         }
