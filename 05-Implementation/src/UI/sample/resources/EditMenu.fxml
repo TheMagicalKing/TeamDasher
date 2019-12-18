@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -10,6 +11,8 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
 <Pane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.sample.appControllers.EditMenuController">
    <children>
       <Pane prefHeight="308.0" prefWidth="594.0">
@@ -39,12 +42,32 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <TextField GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label contentDisplay="CENTER" text="Name" />
-            <Label text="Type" GridPane.columnIndex="1" />
+            <TextField fx:id="NameField" GridPane.rowIndex="1" />
+            <ComboBox fx:id="TypeSelect"  prefWidth="150.0" visibleRowCount="6" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="NORMAL"/>
+                     <String fx:value="WATER"/>
+                     <String fx:value="GROUND"/>
+                     <String fx:value="ELECTRIC"/>
+                     <String fx:value="GRASS"/>
+                     <String fx:value="FLYING"/>
+                     <String fx:value="POISON"/>
+                     <String fx:value="FIGHTING"/>
+                     <String fx:value="ROCK"/>
+                     <String fx:value="BUG"/>
+                     <String fx:value="GHOST"/>
+                     <String fx:value="FIRE"/>
+                     <String fx:value="ICE"/>
+                     <String fx:value="PSYCHIC"/>
+                     <String fx:value="DRAGON"/>
+                  </FXCollections>
+               </items>
+            </ComboBox>            <Label contentDisplay="CENTER" text="Name" />
+
             <Button fx:id="editedButton" mnemonicParsing="false" onAction="#editedButtonAction" text="Add" GridPane.columnIndex="4" GridPane.rowIndex="1" />
             <Label text="*Error message*" textFill="#bf0707" visible="false" GridPane.columnIndex="4" />
+            <Label text="Type" GridPane.columnIndex="1" />
          </children>
       </GridPane>
    </children>

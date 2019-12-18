@@ -1,5 +1,7 @@
 package Persistance;
 
+import Logic.Pokemon;
+
 import java.sql.SQLException;
 
 public class DBFacade {
@@ -12,4 +14,9 @@ public class DBFacade {
     public void DBFacade(int pid) throws SQLException {
         PokemonMapper.deletePokemon(pid);
     }
-}
+    public void DBFacade (String name, int type,int pid) throws SQLException{
+            PokemonMapper.specifyPokemon(name, type, pid);
+        }
+        }
+
+
