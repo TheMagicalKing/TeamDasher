@@ -1,21 +1,15 @@
 package UI.sample.appControllers;
 
 import Logic.DasherDexCon;
-import Logic.Pokemon;
 import Logic.Type;
-import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
-import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.ComboBoxBase;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.scene.control.SelectionModel;
 
 
-import javax.swing.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -25,7 +19,7 @@ public class AddMenuController {
     //Add Pokemon action
     public Button addedButton = new Button();
     public TextField addNameField = new TextField();
-    public ComboBox comboSelect = new ComboBox();
+    public ComboBox TypeSelect = new ComboBox();
     public int typeNumber;
 
     public boolean validate() throws SQLException {
@@ -51,13 +45,13 @@ public class AddMenuController {
 
 
     public void addComboItem(ActionEvent typeSelect){
-        comboSelect.getItems().addAll("Normal","Water");
+        TypeSelect.getItems().addAll("Normal","Water");
             }
 
 
     public void addedButtonAction(ActionEvent addButtonEvent) throws IOException, SQLException {
         Type types = Type.BLANK;
-        String selectedItem = String.valueOf(comboSelect.getSelectionModel().getSelectedItem());
+        String selectedItem = (String) TypeSelect.getValue();
 
 
         /*switch(comboSelect.getValue().toString()) {
@@ -69,7 +63,7 @@ public class AddMenuController {
 
         System.out.println(selectedItem);
         System.out.println(typeNumber);
-        TextField s = comboSelect.getEditor();
+        TextField s = TypeSelect.getEditor();
 
         System.out.println(selectedItem);
         System.out.println(s);
