@@ -1,13 +1,12 @@
-package UI.sample;
+package UI;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 
-public class Main extends Application {
+public class UIFacade extends Application {
 
     //Starting the application
     @Override
@@ -23,9 +22,6 @@ public class Main extends Application {
         primaryStage.setTitle("DasherDex");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
-        ComboBox<String> comboSelect = new ComboBox<String>();
-
-
     }
 
 

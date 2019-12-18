@@ -14,24 +14,24 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="705.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.sample.appControllers.MainMenuController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="705.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.appControllers.MainMenuController">
    <children>
       <Pane prefHeight="239.0" prefWidth="764.0">
          <children>
             <ImageView fitHeight="260.0" fitWidth="770.0" layoutX="-6.0" layoutY="-36.0" pickOnBounds="true">
                <image>
-                  <Image url="@../../pictures/dasherBackground.jpg" />
+                  <Image url="@../pictures/dasherBackground.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="140.0" fitWidth="287.0" layoutX="123.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../pictures/menudexgit.png" />
+                  <Image url="@../pictures/menudexgit.png" />
                </image>
             </ImageView>
             <Label layoutX="664.0" layoutY="203.0" text="*Error Message*" textFill="RED" visible="false" />
             <ImageView fitHeight="134.0" fitWidth="200.0" layoutX="437.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../pictures/dasherMenuGit.png" />
+                  <Image url="@../pictures/dasherMenuGit.png" />
                </image>
             </ImageView>
          </children></Pane>

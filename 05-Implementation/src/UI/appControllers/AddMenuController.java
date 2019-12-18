@@ -1,4 +1,4 @@
-package UI.sample.appControllers;
+package UI.appControllers;
 
 import Logic.DasherDexCon;
 import Logic.Type;

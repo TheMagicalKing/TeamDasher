@@ -1,4 +1,4 @@
-package UI.sample.appControllers;
+package UI.appControllers;
 
 import Logic.Pokemon;
 import javafx.collections.ObservableList;
@@ -116,7 +116,7 @@ public class MainMenuController {
     public void deleteAction(ActionEvent deleteEvent) throws IOException {
         try {
             if (dasherDexTable.getSelectionModel().getSelectedItem() != null) {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/deleteWarning.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/DeleteWarning.fxml"));
                 Parent deleteParent = (Parent) fxmlLoader.load();
                 Stage deleteStage = new Stage();
                 deleteStage.initModality(Modality.APPLICATION_MODAL);

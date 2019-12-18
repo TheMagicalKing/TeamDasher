@@ -1,4 +1,4 @@
-package UI.sample.appControllers;
+package UI.appControllers;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;

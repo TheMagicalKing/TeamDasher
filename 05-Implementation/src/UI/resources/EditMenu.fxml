@@ -10,18 +10,18 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<Pane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.sample.appControllers.EditMenuController">
+<Pane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.appControllers.EditMenuController">
    <children>
       <Pane prefHeight="308.0" prefWidth="594.0">
          <children>
             <ImageView fitHeight="322.0" fitWidth="583.0" layoutX="6.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../pictures/editMenugit.png" />
+                  <Image url="@../pictures/editMenugit.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="298.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../pictures/dasherEditGit.png" />
+                  <Image url="@../pictures/dasherEditGit.png" />
                </image>
             </ImageView>
          </children>
