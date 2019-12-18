@@ -13,6 +13,10 @@ public class DasherDexCon  {
         DBFacade deletePokemon = new DBFacade();
         deletePokemon.DBFacade(pid);
     }
+    public void DasherDexCon(String name, int type, int pid) throws SQLException{
+        DBFacade specifyPokemon = new DBFacade();
+        specifyPokemon.DBFacade(name, type, pid);
+    }
 
     public static void main(String[] args) throws SQLException {
 

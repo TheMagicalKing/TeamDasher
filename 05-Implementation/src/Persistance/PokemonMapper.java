@@ -14,7 +14,7 @@ public class PokemonMapper {
     public static int addPokemon() throws SQLException {
 
         conDB = DBCon.getConnectionDB();
-        String queryString="insert into pokemontable(name, type) values('',1);";
+        String queryString="insert into pokemontable(name, type) values('', 1);";
         prestmt = conDB.prepareStatement(queryString);
         prestmt.execute();
        // prestmt.getGeneratedKeys();
@@ -29,11 +29,12 @@ public class PokemonMapper {
     }
 
     public static void specifyPokemon(String name, int type, int pid) throws SQLException {
-
-        String queryString="update pokemontable set name=?, type=? where pid = "+ pid +";";
+        conDB = DBCon.getConnectionDB();
+        String queryString="update pokemontable set name=?, type=? where pid =?;";
         prestmt = conDB.prepareStatement(queryString);
         prestmt.setString(1, name);
         prestmt.setInt(2, type);
+        prestmt.setInt(3, pid);
         prestmt.execute();
 
     }
