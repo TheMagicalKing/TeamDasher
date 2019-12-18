@@ -9,12 +9,6 @@ import javafx.stage.Stage;
 public class UIFacade extends Application {
 
     //Starting the application
-    @Override
-    public void init() throws Exception {
-        System.out.println("Application initializing!");
-        //TODO lav en klasse med metoden forneden
-        //Logic.Pokemon.initializeDasherDex();
-    }
 
     @Override
     public void start(Stage primaryStage) throws Exception{
