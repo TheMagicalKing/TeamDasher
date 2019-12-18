@@ -15,7 +15,6 @@ public class DeleteController {
 
     public void confirmDeleteButtonAction(ActionEvent addButtonEvent) throws IOException, SQLException {
         deletePokemon.DasherDexCon(mainMenuControl.getSelectionModel());
-        System.out.println(mainMenuControl.getSelectionModel());
 
         Stage stage = (Stage) confirmDeleteButton.getScene().getWindow();
      DasherDexCon delete = new DasherDexCon();

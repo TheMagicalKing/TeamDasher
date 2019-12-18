@@ -17,6 +17,7 @@ public class PokemonMapper {
         String queryString="insert into pokemontable(name, type) values('',1);";
         prestmt = conDB.prepareStatement(queryString);
         prestmt.execute();
+       // prestmt.getGeneratedKeys();
         queryString = "select pid from pokemontable order by pid desc limit 1;";
         prestmt = conDB.prepareStatement(queryString);
         result = prestmt.executeQuery();

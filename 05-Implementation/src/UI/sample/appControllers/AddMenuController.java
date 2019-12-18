@@ -27,6 +27,7 @@ public class AddMenuController {
     public TextField addNameField = new TextField();
     public ComboBox comboSelect = new ComboBox();
     public int typeNumber;
+
     public boolean validate() throws SQLException {
         StringBuilder errors = new StringBuilder();
         if (addNameField.getText().isEmpty()) {
@@ -55,10 +56,8 @@ public class AddMenuController {
 
 
     public void addedButtonAction(ActionEvent addButtonEvent) throws IOException, SQLException {
-        int typeNumber = 0;
         Type types = Type.BLANK;
         String selectedItem = String.valueOf(comboSelect.getSelectionModel().getSelectedItem());
-
 
 
         /*switch(comboSelect.getValue().toString()) {
@@ -67,7 +66,7 @@ public class AddMenuController {
                 System.out.println(typeNumber);
                 break;
         } */
-        validate();
+
         System.out.println(selectedItem);
         System.out.println(typeNumber);
         TextField s = comboSelect.getEditor();
