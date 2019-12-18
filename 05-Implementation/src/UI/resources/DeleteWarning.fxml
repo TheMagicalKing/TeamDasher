@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.sample.appControllers.DeleteController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.appControllers.DeleteController">
    <children>
       <VBox prefHeight="400.0" prefWidth="600.0">
          <children>
@@ -22,7 +22,7 @@
                   </Label>
                   <ImageView fitHeight="196.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../pictures/SadDasherGit.png" />
+                        <Image url="@../pictures/SadDasherGit.png" />
                      </image>
                   </ImageView>
                </children>

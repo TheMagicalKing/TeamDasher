@@ -81,6 +81,7 @@ public class MainMenuController {
 
     public void editAction(ActionEvent editEvent) throws IOException {
         try {
+            if (dasherDexTable.getSelectionModel().getSelectedItem() != null) {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/EditMenu.fxml"));
             Parent editMenuParent = (Parent) fxmlLoader.load();
             Stage editStage = new Stage();
@@ -88,7 +89,10 @@ public class MainMenuController {
             editStage.initStyle(StageStyle.UTILITY);
             editStage.setTitle("Edit Menu");
             editStage.setScene(new Scene(editMenuParent));
+            selectionModel = dasherDexTable.getSelectionModel().getSelectedItem().getPid();
             editStage.show();
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -120,15 +124,15 @@ public class MainMenuController {
     public void deleteAction(ActionEvent deleteEvent) throws IOException {
         try {
             if (dasherDexTable.getSelectionModel().getSelectedItem() != null) {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/deleteWarning.fxml"));
-            Parent deleteParent = (Parent) fxmlLoader.load();
-            Stage deleteStage = new Stage();
-            deleteStage.initModality(Modality.APPLICATION_MODAL);
-            deleteStage.initStyle(StageStyle.UTILITY);
-            deleteStage.setTitle("Confirm Deletion");
-            deleteStage.setScene(new Scene(deleteParent));
-                 selectionModel = dasherDexTable.getSelectionModel().getSelectedItem().getPid();
-            deleteStage.show();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/deleteWarning.fxml"));
+                Parent deleteParent = (Parent) fxmlLoader.load();
+                Stage deleteStage = new Stage();
+                deleteStage.initModality(Modality.APPLICATION_MODAL);
+                deleteStage.initStyle(StageStyle.UTILITY);
+                deleteStage.setTitle("Confirm Deletion");
+                deleteStage.setScene(new Scene(deleteParent));
+                selectionModel = dasherDexTable.getSelectionModel().getSelectedItem().getPid();
+                deleteStage.show();
             }
         } catch (Exception e) {
             e.printStackTrace();
