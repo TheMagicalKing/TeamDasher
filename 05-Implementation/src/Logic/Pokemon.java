@@ -6,7 +6,7 @@ import javax.xml.namespace.QName;
 import java.sql.SQLException;
 
 public class Pokemon {
-
+    private  String sletdether;
     private String name;
     private int type;
     private String typeord;
